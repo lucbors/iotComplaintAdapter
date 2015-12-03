@@ -1,0 +1,4 @@
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog">
+  <system systemId="http://vdds-nlsoa-01.lux.eproseed.com:7003/soa-infra/services/default/ComplaintService/ComplaintService-1.0?wsdl#%7Bhttp%3A%2F%2Fhrlmr.nl%2Fcomplaint%2Fservice%2F1.0%7DComplaintService-1.0_2"
+          uri="../nl/hrlmr/complaint/service/_1/ComplaintService-1.0_2.wsdl"/>
+</catalog>

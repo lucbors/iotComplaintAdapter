@@ -1,0 +1,376 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<jdevws:WebServiceProxy xmlns:jdevws="http://xmlns.oracle.com/jdeveloper/10130/webserviceproxy">
+   <list n="CHILD_NODES">
+      <url path="ComplaintService102.xml"/>
+      <url path="ComplaintService-1.0_2.wsdl"/>
+      <url path="ComplaintService-1.0ComplaintService-1.0.xsd"/>
+      <url path="ComplaintService-1.0Order-1.0.xsd"/>
+      <url path="ComplaintService-1.0Complaint-1.0.xsd"/>
+      <url path="ComplaintService-1.0OrderService-1.0.xsd"/>
+      <url path="../../messages/_1/UnknownComplaintFaultMessage.java"/>
+      <url path="../../messages/_1/RegisterRepairRequestMessage.java"/>
+      <url path="../../messages/_1/EmailActivityResponseMessage.java"/>
+      <url path="../../messages/_1/GetActivatableActivitiesRequestMessage.java"/>
+      <url path="../../../order/messages/_1/GetOrderResponsetMessage.java"/>
+      <url path="../../../order/messages/_1/GetItemsRequestMessage.java"/>
+      <url path="../../messages/_1/EndRepairRequestMessage.java"/>
+      <url path="../../../order/messages/_1/GetItemsResponseMessage.java"/>
+      <url path="../../../order/messages/_1/CreateItemsResponseMessage.java"/>
+      <url path="../../messages/_1/GetComplaintOverviewRequestMessage.java"/>
+      <url path="../../messages/_1/StartRepairRequestMessage.java"/>
+      <url path="../../messages/_1/CreateComplaintRequestMessage.java"/>
+      <url path="../../messages/_1/EndRepairResponseMessage.java"/>
+      <url path="../../../order/messages/_1/CreateOrderRequestMessage.java"/>
+      <url path="../../messages/_1/EmailActivityRequestMessage.java"/>
+      <url path="../../../order/messages/_1/GetContractorsRequestMessage.java"/>
+      <url path="../../_1/Complaint.java"/>
+      <url path="../../../order/messages/_1/ObjectFactory.java"/>
+      <url path="../../../order/_1/package-info.java"/>
+      <url path="ComplaintServicePortClient.java"/>
+      <url path="../../messages/_1/ObjectFactory.java"/>
+      <url path="../../messages/_1/PlanActivityRequestMessage.java"/>
+      <url path="ComplaintService102.java"/>
+      <url path="../../messages/_1/RegisterRepairResponseMessage.java"/>
+      <url path="../../messages/_1/GetActivatableActivitiesResponseMessage.java"/>
+      <url path="../../messages/_1/GetMilestoneOverviewRequestMessage.java"/>
+      <url path="../../messages/_1/GetStageOverviewRequestMessage.java"/>
+      <url path="../../_1/Milestone.java"/>
+      <url path="ComplaintServicePortType.java"/>
+      <url path="../../../order/messages/_1/GetOrderRequestMessage.java"/>
+      <url path="../../messages/_1/ConverseActivityRequestMessage.java"/>
+      <url path="../../_1/Complaintfilter.java"/>
+      <url path="../../../order/_1/Contractor.java"/>
+      <url path="../../../order/messages/_1/package-info.java"/>
+      <url path="UnknownComplaintFault.java"/>
+      <url path="../../../order/messages/_1/CreateContractorsRequestMessage.java"/>
+      <url path="../../../order/_1/ItemsList.java"/>
+      <url path="../../../order/messages/_1/CreateOrderResponsetMessage.java"/>
+      <url path="../../messages/_1/package-info.java"/>
+      <url path="../../../order/_1/ObjectFactory.java"/>
+      <url path="../../_1/Email.java"/>
+      <url path="../../messages/_1/DecideActivityRequestMessage.java"/>
+      <url path="../../messages/_1/ConverseActivityResponseMessage.java"/>
+      <url path="../../_1/ObjectFactory.java"/>
+      <url path="../../messages/_1/GetStageOverviewResponseMessage.java"/>
+      <url path="../../_1/Activity.java"/>
+      <url path="../../../order/_1/ContractorsList.java"/>
+      <url path="../../_1/Address.java"/>
+      <url path="../../../order/messages/_1/CreateContractorsResponseMessage.java"/>
+      <url path="../../messages/_1/GetComplaintDetailsResponseMessage.java"/>
+      <url path="../../messages/_1/StartRepairResponseMessage.java"/>
+      <url path="../../messages/_1/PlanActivityResponseMessage.java"/>
+      <url path="../../messages/_1/GetComplaintDetailsRequestMessage.java"/>
+      <url path="../../../order/messages/_1/GetContractorsResponseMessage.java"/>
+      <url path="../../messages/_1/CreateComplaintResponseMessage.java"/>
+      <url path="../../_1/ComplaintDetail.java"/>
+      <url path="../../_1/Stage.java"/>
+      <url path="../../../order/_1/Item.java"/>
+      <url path="../../messages/_1/GetComplaintOverviewResponseMessage.java"/>
+      <url path="../../_1/Complainer.java"/>
+      <url path="../../messages/_1/GetMilestoneOverviewResponseMessage.java"/>
+      <url path="../../../order/messages/_1/CreateItemsRequestMessage.java"/>
+      <url path="../../messages/_1/DecideActivityResponseMessage.java"/>
+      <url path="../../../order/_1/Order.java"/>
+      <url path="../../_1/package-info.java"/>
+   </list>
+   <hash n="DATA_MODEL">
+      <value n="ATTACHMENT_ENCODING" v="MIME"/>
+      <list n="LOCAL_FILES"/>
+      <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy"/>
+      <url n="ORACLE_WEBSERVICES_XML" path="ComplaintService102.xml"/>
+      <hash n="PROPERTY_GROUPS">
+         <hash n="WSDL_TO_JAVA_PROPERTIES">
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+         </hash>
+      </hash>
+      <value n="PROXY_ASYNC_METHODS" v="FOR_NONE"/>
+      <list n="PROXY_CLIENTS">
+         <url path="ComplaintServicePortClient.java"/>
+      </list>
+      <value n="PROXY_MAPPING_URL"/>
+      <url n="PROXY_ORIGINAL_WSDL_URL" protocol="http" host="vdds-nlsoa-01.lux.eproseed.com" port="7003" path="/soa-infra/services/default/ComplaintService/ComplaintService-1.0" query="wsdl"/>
+      <hash n="PROXY_PORTS">
+         <hash n="ComplaintServicePort">
+            <value n="ACCESSES_DOC_WRAPPPED" v="true"/>
+            <value n="ACCESSES_RPC_ENCODED" v="false"/>
+            <value n="CLASS_NAME" v="nl.hrlmr.complaint.service._1.ComplaintServicePortType"/>
+            <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyPort"/>
+            <value n="NAME" v="ComplaintServicePort"/>
+            <hash n="OPERATIONS">
+               <hash n="converseActivity">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createComplaint">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="createOrder">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="decideActivity">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="emailActivity">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="endRepair">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getActivatableActivities">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getComplaintDetails">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getComplaintOverview">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getMilestoneOverview">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="getStageOverview">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="planActivity">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="registerRepairActivity">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+               <hash n="startRepair">
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.ProxyOperation"/>
+                  <hash n="PROPERTY_GROUPS"/>
+               </hash>
+            </hash>
+            <hash n="PROPERTY_GROUPS">
+               <hash n="WS_POLICY">
+                  <value n="addressing"/>
+                  <hash n="GLOBAL_CONFIG_PROPERTIES"/>
+                  <list n="management"/>
+                  <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.policy.PolicyClientModel"/>
+                  <value n="mtom"/>
+                  <hash n="POLICY_OVERRIDE_PROPERTIES"/>
+                  <list n="security"/>
+                  <list n="wsconfig"/>
+                  <value n="wsrm"/>
+               </hash>
+            </hash>
+            <url n="PROXY_ORIGINAL_PORT_ENDPOINT" protocol="http" host="vdds-nlsoa-01.lux.eproseed.com" port="7003" path="/soa-infra/services/default/ComplaintService/ComplaintService-1.0"/>
+         </hash>
+      </hash>
+      <value n="PROXY_SERVICE_NAME" v="ComplaintService-1.0_2"/>
+      <value n="PROXY_SERVICE_NAMESPACE" v="http://hrlmr.nl/complaint/service/1.0"/>
+      <url n="PROXY_TARGET_PROJECT" path="../../../../../../Adapter.jpr"/>
+      <list n="PROXY_WSDL_IMPORT_LIST">
+         <url path="ComplaintService-1.0ComplaintService-1.0.xsd"/>
+         <url path="ComplaintService-1.0Order-1.0.xsd"/>
+         <url path="ComplaintService-1.0Complaint-1.0.xsd"/>
+         <url path="ComplaintService-1.0OrderService-1.0.xsd"/>
+      </list>
+      <url n="PROXY_WSDL_URL" path="ComplaintService-1.0_2.wsdl"/>
+      <hash n="REFERENCED_WEBSERVICE">
+         <list n="BD_">
+            <hash>
+               <value n="BOUND_PORT_TYPE" v="{http://hrlmr.nl/complaint/service/1.0}ComplaintServicePortType"/>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPBinding"/>
+               <value n="NAME" v="{http://hrlmr.nl/complaint/service/1.0}ComplaintServiceSoapHttpBinding"/>
+               <list n="OP_BINDINGS">
+                  <hash>
+                     <value n="BOUND_OPERATION" v="nl.hrlmr.complaint.messages._1.CreateComplaintResponseMessage.createComplaint.nl.hrlmr.complaint.messages._1.CreateComplaintRequestMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="nl.hrlmr.complaint.messages._1.GetComplaintOverviewResponseMessage.getComplaintOverview.nl.hrlmr.complaint.messages._1.GetComplaintOverviewRequestMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="nl.hrlmr.complaint.messages._1.GetComplaintDetailsResponseMessage.getComplaintDetails.nl.hrlmr.complaint.messages._1.GetComplaintDetailsRequestMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="nl.hrlmr.complaint.messages._1.GetActivatableActivitiesResponseMessage.getActivatableActivities.nl.hrlmr.complaint.messages._1.GetActivatableActivitiesRequestMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="nl.hrlmr.complaint.messages._1.GetStageOverviewResponseMessage.getStageOverview.nl.hrlmr.complaint.messages._1.GetStageOverviewRequestMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="nl.hrlmr.complaint.messages._1.GetMilestoneOverviewResponseMessage.getMilestoneOverview.nl.hrlmr.complaint.messages._1.GetMilestoneOverviewRequestMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="nl.hrlmr.complaint.messages._1.ConverseActivityResponseMessage.converseActivity.nl.hrlmr.complaint.messages._1.ConverseActivityRequestMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="nl.hrlmr.complaint.messages._1.PlanActivityResponseMessage.planActivity.nl.hrlmr.complaint.messages._1.PlanActivityRequestMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="nl.hrlmr.complaint.messages._1.DecideActivityResponseMessage.decideActivity.nl.hrlmr.complaint.messages._1.DecideActivityRequestMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="nl.hrlmr.complaint.messages._1.EmailActivityResponseMessage.emailActivity.nl.hrlmr.complaint.messages._1.EmailActivityRequestMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="nl.hrlmr.complaint.messages._1.RegisterRepairResponseMessage.registerRepairActivity.nl.hrlmr.complaint.messages._1.RegisterRepairRequestMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="nl.hrlmr.complaint.messages._1.StartRepairResponseMessage.startRepair.nl.hrlmr.complaint.messages._1.StartRepairRequestMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="nl.hrlmr.complaint.messages._1.EndRepairResponseMessage.endRepair.nl.hrlmr.complaint.messages._1.EndRepairRequestMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="BOUND_OPERATION" v="nl.hrlmr.order.messages._1.CreateOrderResponsetMessage.createOrder.nl.hrlmr.order.messages._1.CreateOrderRequestMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPOperationBinding"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+               </list>
+               <hash n="PROPERTY_GROUPS"/>
+            </hash>
+         </list>
+         <list n="BINDING_FILES"/>
+         <value n="GUID" v="b6945b72-014f-1000-8005-c0a82bd04301"/>
+         <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.proxy.WebServiceProxy$ProxyJavaWebService"/>
+         <list n="PO_">
+            <hash>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.SOAPPort"/>
+               <value n="NAME" v="ComplaintServicePort"/>
+               <value n="PORT_BINDING_NAME" v="{http://hrlmr.nl/complaint/service/1.0}ComplaintServiceSoapHttpBinding"/>
+               <list n="PORT_OPS">
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="nl.hrlmr.complaint.messages._1.CreateComplaintResponseMessage.createComplaint.nl.hrlmr.complaint.messages._1.CreateComplaintRequestMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="nl.hrlmr.complaint.messages._1.GetComplaintOverviewResponseMessage.getComplaintOverview.nl.hrlmr.complaint.messages._1.GetComplaintOverviewRequestMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="nl.hrlmr.complaint.messages._1.GetComplaintDetailsResponseMessage.getComplaintDetails.nl.hrlmr.complaint.messages._1.GetComplaintDetailsRequestMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="nl.hrlmr.complaint.messages._1.GetActivatableActivitiesResponseMessage.getActivatableActivities.nl.hrlmr.complaint.messages._1.GetActivatableActivitiesRequestMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="nl.hrlmr.complaint.messages._1.GetStageOverviewResponseMessage.getStageOverview.nl.hrlmr.complaint.messages._1.GetStageOverviewRequestMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="nl.hrlmr.complaint.messages._1.GetMilestoneOverviewResponseMessage.getMilestoneOverview.nl.hrlmr.complaint.messages._1.GetMilestoneOverviewRequestMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="nl.hrlmr.complaint.messages._1.ConverseActivityResponseMessage.converseActivity.nl.hrlmr.complaint.messages._1.ConverseActivityRequestMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="nl.hrlmr.complaint.messages._1.PlanActivityResponseMessage.planActivity.nl.hrlmr.complaint.messages._1.PlanActivityRequestMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="nl.hrlmr.complaint.messages._1.DecideActivityResponseMessage.decideActivity.nl.hrlmr.complaint.messages._1.DecideActivityRequestMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="nl.hrlmr.complaint.messages._1.EmailActivityResponseMessage.emailActivity.nl.hrlmr.complaint.messages._1.EmailActivityRequestMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="nl.hrlmr.complaint.messages._1.RegisterRepairResponseMessage.registerRepairActivity.nl.hrlmr.complaint.messages._1.RegisterRepairRequestMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="nl.hrlmr.complaint.messages._1.StartRepairResponseMessage.startRepair.nl.hrlmr.complaint.messages._1.StartRepairRequestMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="nl.hrlmr.complaint.messages._1.EndRepairResponseMessage.endRepair.nl.hrlmr.complaint.messages._1.EndRepairRequestMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+                  <hash>
+                     <value n="EXPOSED_BD_OPERATION" v="nl.hrlmr.order.messages._1.CreateOrderResponsetMessage.createOrder.nl.hrlmr.order.messages._1.CreateOrderRequestMessage"/>
+                     <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.PortOperation"/>
+                     <hash n="PROPERTY_GROUPS"/>
+                  </hash>
+               </list>
+               <hash n="PROPERTY_GROUPS"/>
+               <url n="URL" protocol="http" host="vdds-nlsoa-01.lux.eproseed.com" port="7003" path="/soa-infra/services/default/ComplaintService/ComplaintService-1.0"/>
+            </hash>
+         </list>
+         <hash n="PROPERTY_GROUPS">
+            <hash n="WSDL_TO_JAVA_PROPERTIES">
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.WSDLToJavaProperties"/>
+            </hash>
+         </hash>
+         <list n="PT_">
+            <hash>
+               <value n="AUTO_SERVICE_INTERFACE"/>
+               <value n="DEFAULT_NAME" v="false"/>
+               <value n="MODEL_CLASS" v="oracle.jdeveloper.webservices.model.java.JavaPortType"/>
+               <value n="NAME" v="{http://hrlmr.nl/complaint/service/1.0}ComplaintServicePortType"/>
+               <hash n="PROPERTY_GROUPS"/>
+               <value n="PT_CLASS" v="nl.hrlmr.complaint.service._1.ComplaintServicePortTypeImpl"/>
+               <value n="PT_SERVICE_INTERFACE" v="nl.hrlmr.complaint.service._1.ComplaintServicePortType"/>
+               <value n="PT_TOP_DOWN_GENERATED_SEI_NAME" v="nl.hrlmr.complaint.service._1.ComplaintServicePortType"/>
+            </hash>
+         </list>
+         <url n="TARGET_PROJECT" path="../../../../../../Adapter.jpr"/>
+         <value n="WS_ORIG_GEN_DIRECTION" v="TOP_DOWN"/>
+         <value n="WS_TARGET_NAMESPACE" v="http://hrlmr.nl/complaint/service/1.0"/>
+         <value n="WS_URI" v="ComplaintService-1.0_2"/>
+         <url n="WS_WSDL_FILE" path="ComplaintService-1.0_2.wsdl"/>
+      </hash>
+      <value n="SERVICE_ASYNC" v="false"/>
+      <value n="USE_WSDL_LOCATION" v="true"/>
+   </hash>
+</jdevws:WebServiceProxy>

@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://hrlmr.nl/order/1.0" targetNamespace="http://hrlmr.nl/order/1.0" elementFormDefault="qualified">
+  <xsd:element name="Contractor">
+    <xsd:annotation>
+      <xsd:documentation>A sample element</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="contractorID" minOccurs="0" maxOccurs="1"/>
+        <xsd:element ref="contractorName"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="Item">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="itemID" minOccurs="0" maxOccurs="1"/>
+        <xsd:element ref="itemDescription"/>
+        <xsd:element name="units" type="xsd:integer"/>
+        <xsd:element ref="costPerUnit"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="costPerUnit" type="xsd:string"/>
+  <xsd:element name="itemID" type="xsd:integer"/>
+  <xsd:element name="itemDescription" type="xsd:string"/>
+  <xsd:element name="ContractorsList">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="Contractor"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="ItemsList">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="Item"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="contractorID" type="xsd:integer"/>
+  <xsd:element name="contractorName" type="xsd:string"/>
+  <xsd:element name="Status" type="xsd:string"/>
+  <xsd:element name="Description" type="xsd:string"/>
+  <xsd:element name="Order">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="orderID" minOccurs="0" maxOccurs="1"/>
+        <xsd:element ref="caseID"/>
+        <xsd:element name="user" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+        <xsd:element ref="contractorID"/>
+        <xsd:element ref="contractorName" minOccurs="0" maxOccurs="1"/>
+        <xsd:element ref="createDate" minOccurs="0" maxOccurs="1"/>
+        <xsd:element ref="lastUpdateDate" minOccurs="0" maxOccurs="1"/>
+        <xsd:element name="expectedCompletionDate" type="xsd:date"/>
+        <xsd:element name="orderNumber" type="xsd:string"/>
+        <xsd:element name="ListOfOrderItems">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="OrderItem">
+                <xsd:complexType>
+                  <xsd:sequence>
+                    <xsd:element ref="itemID"/>
+                    <xsd:element ref="itemDescription" minOccurs="0" maxOccurs="1"/>
+                    <xsd:element name="orderUnits" type="xsd:integer"/>
+                    <xsd:element name="remainingUnits" type="xsd:integer"/>
+                    <xsd:element name="price" type="xsd:string"/>
+                    <xsd:element ref="costPerUnit" minOccurs="0" maxOccurs="1"/>
+                  </xsd:sequence>
+                </xsd:complexType>
+              </xsd:element>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="caseID" type="xsd:string"/>
+  <xsd:element name="createDate" type="xsd:date"/>
+  <xsd:element name="lastUpdateDate" type="xsd:date"/>
+  <xsd:element name="orderID" type="xsd:integer"/>
+</xsd:schema>

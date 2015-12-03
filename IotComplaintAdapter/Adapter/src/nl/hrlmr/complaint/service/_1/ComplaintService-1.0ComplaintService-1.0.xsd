@@ -1,0 +1,297 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://hrlmr.nl/complaint/messages/1.0" targetNamespace="http://hrlmr.nl/complaint/messages/1.0" elementFormDefault="qualified" xmlns:ntf="http://hrlmr.nl/complaint/1.0">
+  <xsd:annotation>
+    <xsd:documentation>This XSD describes the message types (request,
+                           response, and fault messages) of the ComplaintService
+                           (version 1.0) for the municipality of Haarlemmermeer
+                           as part of the HaarlemmerTopia project.</xsd:documentation>
+  </xsd:annotation>
+  <xsd:import namespace="http://hrlmr.nl/complaint/1.0" schemaLocation="ComplaintService-1.0Complaint-1.0.xsd"/>
+  <xsd:element name="CreateComplaintRequestMessage">
+    <xsd:annotation>
+      <xsd:documentation/>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ntf:complaintDetail"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="CreateComplaintResponseMessage">
+    <xsd:annotation>
+      <xsd:documentation/>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ntf:complaintIdentifier"/>
+        <xsd:element ref="ntf:caseIdentifier"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="GetComplaintOverviewRequestMessage">
+    <xsd:annotation>
+      <xsd:documentation/>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ntf:complaintfilter"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="GetComplaintOverviewResponseMessage">
+    <xsd:annotation>
+      <xsd:documentation/>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ntf:complaint" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="GetComplaintDetailsRequestMessage">
+    <xsd:annotation>
+      <xsd:documentation/>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ntf:complaintIdentifier"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="GetComplaintDetailsResponseMessage">
+    <xsd:annotation>
+      <xsd:documentation/>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ntf:complaintDetail"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="GetActivatableActivitiesRequestMessage">
+    <xsd:annotation>
+      <xsd:documentation/>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ntf:caseIdentifier"/>
+        <xsd:element name="user" type="ntf:userNameType"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="GetActivatableActivitiesResponseMessage">
+    <xsd:annotation>
+      <xsd:documentation/>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ntf:activity" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="GetStageOverviewRequestMessage">
+    <xsd:annotation>
+      <xsd:documentation>used to show the different stages in the progress bar.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ntf:caseIdentifier"/>
+        <xsd:element name="user" type="ntf:userNameType"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="GetStageOverviewResponseMessage">
+    <xsd:annotation>
+      <xsd:documentation/>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ntf:stage" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="GetMilestoneOverviewRequestMessage">
+    <xsd:annotation>
+      <xsd:documentation>used to determine state of checkboxes</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ntf:caseIdentifier"/>
+        <xsd:element name="user" type="ntf:userNameType"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="GetMilestoneOverviewResponseMessage">
+    <xsd:annotation>
+      <xsd:documentation/>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ntf:milestone" minOccurs="0" maxOccurs="unbounded"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="ConverseActivityRequestMessage">
+    <xsd:annotation>
+      <xsd:documentation/>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ntf:caseIdentifier"/>
+        <xsd:element name="user" type="ntf:userNameType"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="ConverseActivityResponseMessage">
+    <xsd:annotation>
+      <xsd:documentation/>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="isCompleted" type="xsd:boolean"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="PlanActivityRequestMessage">
+    <xsd:annotation>
+      <xsd:documentation/>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ntf:caseIdentifier"/>
+        <xsd:element name="user" type="ntf:userNameType"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="PlanActivityResponseMessage">
+    <xsd:annotation>
+      <xsd:documentation/>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="result" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="DecideActivityRequestMessage">
+    <xsd:annotation>
+      <xsd:documentation>triggered when clicking go, no go, duplicate</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ntf:caseIdentifier"/>
+        <xsd:element ref="ntf:complaintIdentifier" minOccurs="0"/>
+        <xsd:element name="user" type="ntf:userNameType"/>
+        <xsd:element ref="ntf:decision"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="DecideActivityResponseMessage">
+    <xsd:annotation>
+      <xsd:documentation>answer when the activity is registered (in most cases closes)</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="result" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="EmailActivityRequestMessage">
+    <xsd:annotation>
+      <xsd:documentation>triggered for sending email</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ntf:caseIdentifier"/>
+        <xsd:element name="user" type="ntf:userNameType"/>
+        <xsd:element ref="ntf:email"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="EmailActivityResponseMessage">
+    <xsd:annotation>
+      <xsd:documentation>answer when the activity is executed (email is send))</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="result" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="RegisterRepairRequestMessage">
+    <xsd:annotation>
+      <xsd:documentation>the solution that was used</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ntf:caseIdentifier"/>
+        <xsd:element ref="ntf:complaintIdentifier" minOccurs="0"/>
+        <xsd:element name="user" type="ntf:userNameType"/>
+        <xsd:element ref="ntf:result"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="RegisterRepairResponseMessage">
+    <xsd:annotation>
+      <xsd:documentation>usually just Done</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="result" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="StartRepairRequestMessage">
+    <xsd:annotation>
+      <xsd:documentation/>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="complaintIdentifier" type="ntf:complaintIdentifierType"/>
+        <xsd:element name="user" type="ntf:userNameType"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="StartRepairResponseMessage">
+    <xsd:annotation>
+      <xsd:documentation/>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="result" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="EndRepairRequestMessage">
+    <xsd:annotation>
+      <xsd:documentation/>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="complaintIdentifier" type="ntf:complaintIdentifierType"/>
+        <xsd:element name="user" type="ntf:userNameType"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="EndRepairResponseMessage">
+    <xsd:annotation>
+      <xsd:documentation/>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="result" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="UnknownComplaintFaultMessage">
+    <xsd:annotation>
+      <xsd:documentation>Identifier of the complaint that could not be
+                               found.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ntf:complaintIdentifier"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>

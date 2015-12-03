@@ -1,0 +1,320 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<definitions name="ComplaintService-1.0" targetNamespace="http://hrlmr.nl/complaint/service/1.0" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://hrlmr.nl/complaint/service/1.0" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:msg="http://hrlmr.nl/complaint/messages/1.0" xmlns:msg1="http://hrlmr.nl/order/messages/1.0" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <documentation>
+    <abstractWSDL>http://vdds-nlsoa-01:7003/soa-infra/services/default/ComplaintService!1.3/WSDLs/ComplaintService-1.0.wsdl</abstractWSDL>
+  </documentation>
+  <types>
+    <xsd:schema>
+      <xsd:import namespace="http://hrlmr.nl/complaint/messages/1.0" schemaLocation="ComplaintService-1.0ComplaintService-1.0.xsd"/>
+      <xsd:import namespace="http://hrlmr.nl/order/messages/1.0" schemaLocation="ComplaintService-1.0OrderService-1.0.xsd"/>
+    </xsd:schema>
+  </types>
+  <message name="CreateComplaintRequestMessage">
+    <part name="request" element="msg:CreateComplaintRequestMessage"/>
+  </message>
+  <message name="CreateComplaintResponseMessage">
+    <part name="response" element="msg:CreateComplaintResponseMessage"/>
+  </message>
+  <message name="GetComplaintOverviewRequestMessage">
+    <part name="request" element="msg:GetComplaintOverviewRequestMessage"/>
+  </message>
+  <message name="GetComplaintOverviewResponseMessage">
+    <part name="response" element="msg:GetComplaintOverviewResponseMessage"/>
+  </message>
+  <message name="GetComplaintDetailsRequestMessage">
+    <part name="request" element="msg:GetComplaintDetailsRequestMessage"/>
+  </message>
+  <message name="GetComplaintDetailsResponseMessage">
+    <part name="response" element="msg:GetComplaintDetailsResponseMessage"/>
+  </message>
+  <message name="UnknownComplaintFault">
+    <part name="fault" element="msg:UnknownComplaintFaultMessage"/>
+  </message>
+  <message name="GetActivatableActivitiesRequestMessage">
+    <part name="request" element="msg:GetActivatableActivitiesRequestMessage"/>
+  </message>
+  <message name="GetActivatableActivitiesResponseMessage">
+    <part name="response" element="msg:GetActivatableActivitiesResponseMessage"/>
+  </message>
+  <message name="GetStageOverviewRequestMessage">
+    <part name="request" element="msg:GetStageOverviewRequestMessage"/>
+  </message>
+  <message name="GetStageOverviewResponseMessage">
+    <part name="response" element="msg:GetStageOverviewResponseMessage"/>
+  </message>
+  <message name="GetMilestoneOverviewRequestMessage">
+    <part name="request" element="msg:GetMilestoneOverviewRequestMessage"/>
+  </message>
+  <message name="GetMilestoneOverviewResponseMessage">
+    <part name="response" element="msg:GetMilestoneOverviewResponseMessage"/>
+  </message>
+  <message name="ConverseActivityRequestMessage">
+    <part name="request" element="msg:ConverseActivityRequestMessage"/>
+  </message>
+  <message name="ConverseActivityResponseMessage">
+    <part name="response" element="msg:ConverseActivityResponseMessage"/>
+  </message>
+  <message name="PlanActivityRequestMessage">
+    <part name="request" element="msg:PlanActivityRequestMessage"/>
+  </message>
+  <message name="PlanActivityResponseMessage">
+    <part name="response" element="msg:PlanActivityResponseMessage"/>
+  </message>
+  <message name="DecideActivityRequestMessage">
+    <part name="request" element="msg:DecideActivityRequestMessage"/>
+  </message>
+  <message name="DecideActivityResponseMessage">
+    <part name="response" element="msg:DecideActivityResponseMessage"/>
+  </message>
+  <message name="EmailActivityRequestMessage">
+    <part name="request" element="msg:EmailActivityRequestMessage"/>
+  </message>
+  <message name="EmailActivityResponseMessage">
+    <part name="response" element="msg:EmailActivityResponseMessage"/>
+  </message>
+  <message name="RegisterRepairRequestMessage">
+    <part name="request" element="msg:RegisterRepairRequestMessage"/>
+  </message>
+  <message name="RegisterRepairResponseMessage">
+    <part name="response" element="msg:RegisterRepairResponseMessage"/>
+  </message>
+  <message name="StartRepairRequestMessage">
+    <part name="request" element="msg:StartRepairRequestMessage"/>
+  </message>
+  <message name="StartRepairResponseMessage">
+    <part name="response" element="msg:StartRepairResponseMessage"/>
+  </message>
+  <message name="EndRepairRequestMessage">
+    <part name="request" element="msg:EndRepairRequestMessage"/>
+  </message>
+  <message name="EndRepairResponseMessage">
+    <part name="response" element="msg:EndRepairResponseMessage"/>
+  </message>
+  <message name="CreateOrder_RequestMessage">
+    <part name="request" element="msg1:CreateOrder_RequestMessage"/>
+  </message>
+  <message name="CreateOrder_ResponsetMessage">
+    <part name="response" element="msg1:CreateOrder_ResponsetMessage"/>
+  </message>
+  <portType name="ComplaintServicePortType">
+    <documentation/>
+    <operation name="createComplaint">
+      <documentation>This operation creates a new complaint. A fault is
+                           returned in case mandatory attributes, that are
+                           needed to create the complaint, are missing.</documentation>
+      <input message="tns:CreateComplaintRequestMessage"/>
+      <output message="tns:CreateComplaintResponseMessage"/>
+    </operation>
+    <operation name="getComplaintOverview">
+      <documentation>This operation retrieves all complaints. Note that
+                           this operation does return the main attributes of the
+                           complaints that match the request criteria. It does
+                           NOT return all attributes of the complaint.</documentation>
+      <input message="tns:GetComplaintOverviewRequestMessage"/>
+      <output message="tns:GetComplaintOverviewResponseMessage"/>
+    </operation>
+    <operation name="getComplaintDetails">
+      <documentation>This operation returns all attributes of the
+                           requested complaint; including its details. When the
+                           specified complaint cannot be found, a fault message
+                           is returned.</documentation>
+      <input message="tns:GetComplaintDetailsRequestMessage"/>
+      <output message="tns:GetComplaintDetailsResponseMessage"/>
+      <fault name="UnknownComplaintFault" message="tns:UnknownComplaintFault"/>
+    </operation>
+    <operation name="getActivatableActivities">
+      <documentation/>
+      <input message="tns:GetActivatableActivitiesRequestMessage"/>
+      <output message="tns:GetActivatableActivitiesResponseMessage"/>
+    </operation>
+    <operation name="getStageOverview">
+      <documentation/>
+      <input message="tns:GetStageOverviewRequestMessage"/>
+      <output message="tns:GetStageOverviewResponseMessage"/>
+    </operation>
+    <operation name="getMilestoneOverview">
+      <documentation/>
+      <input message="tns:GetMilestoneOverviewRequestMessage"/>
+      <output message="tns:GetMilestoneOverviewResponseMessage"/>
+    </operation>
+    <operation name="converseActivity">
+      <documentation/>
+      <input message="tns:ConverseActivityRequestMessage"/>
+      <output message="tns:ConverseActivityResponseMessage"/>
+    </operation>
+    <operation name="planActivity">
+      <documentation/>
+      <input message="tns:PlanActivityRequestMessage"/>
+      <output message="tns:PlanActivityResponseMessage"/>
+    </operation>
+    <operation name="decideActivity">
+      <documentation/>
+      <input message="tns:DecideActivityRequestMessage"/>
+      <output message="tns:DecideActivityResponseMessage"/>
+    </operation>
+    <operation name="emailActivity">
+      <documentation/>
+      <input message="tns:EmailActivityRequestMessage"/>
+      <output message="tns:EmailActivityResponseMessage"/>
+    </operation>
+    <operation name="registerRepairActivity">
+      <documentation>documents the repair</documentation>
+      <input message="tns:RegisterRepairRequestMessage"/>
+      <output message="tns:RegisterRepairResponseMessage"/>
+    </operation>
+    <operation name="startRepair">
+      <documentation/>
+      <input message="tns:StartRepairRequestMessage"/>
+      <output message="tns:StartRepairResponseMessage"/>
+    </operation>
+    <operation name="endRepair">
+      <documentation/>
+      <input message="tns:EndRepairRequestMessage"/>
+      <output message="tns:EndRepairResponseMessage"/>
+    </operation>
+    <operation name="createOrder">
+      <documentation>This operation creates a new order for a case</documentation>
+      <input message="tns:CreateOrder_RequestMessage"/>
+      <output message="tns:CreateOrder_ResponsetMessage"/>
+    </operation>
+  </portType>
+  <binding name="ComplaintServiceSoapHttpBinding" type="tns:ComplaintServicePortType">
+    <documentation/>
+    <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <operation name="createComplaint">
+      <soap:operation style="document" soapAction="createComplaint"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="getComplaintOverview">
+      <soap:operation style="document" soapAction="getComplaintsOverview"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="getComplaintDetails">
+      <soap:operation style="document" soapAction="getComplaintDetails"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+      <fault name="UnknownComplaintFault">
+        <soap:fault name="UnknownComplaintFault" use="literal"/>
+      </fault>
+    </operation>
+    <operation name="getActivatableActivities">
+      <soap:operation style="document" soapAction="getActivatableActivities"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="getStageOverview">
+      <soap:operation style="document" soapAction="getStageOverview"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="getMilestoneOverview">
+      <soap:operation style="document" soapAction="getMilestoneOverview"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="converseActivity">
+      <soap:operation style="document" soapAction="converseActivity"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="planActivity">
+      <soap:operation style="document" soapAction="planActivity"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="decideActivity">
+      <soap:operation style="document" soapAction="decideActivity"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="emailActivity">
+      <soap:operation style="document" soapAction="emailActivity"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="registerRepairActivity">
+      <soap:operation style="document" soapAction="registerRepairActivity"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="startRepair">
+      <soap:operation style="document" soapAction="startRepair"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="endRepair">
+      <soap:operation style="document" soapAction="endRepair"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+    <operation name="createOrder">
+      <soap:operation style="document" soapAction="createOrder"/>
+      <input>
+        <soap:body use="literal"/>
+      </input>
+      <output>
+        <soap:body use="literal"/>
+      </output>
+    </operation>
+  </binding>
+  <service name="ComplaintService-1.0_2">
+    <documentation/>
+    <port name="ComplaintServicePort" binding="tns:ComplaintServiceSoapHttpBinding">
+      <soap:address location="http://vdds-nlsoa-01.lux.eproseed.com:7003/soa-infra/services/default/ComplaintService/ComplaintService-1.0"/>
+    </port>
+  </service>
+</definitions>

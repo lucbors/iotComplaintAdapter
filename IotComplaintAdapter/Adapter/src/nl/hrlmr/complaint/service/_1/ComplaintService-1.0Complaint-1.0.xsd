@@ -1,0 +1,160 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://hrlmr.nl/complaint/1.0" targetNamespace="http://hrlmr.nl/complaint/1.0" elementFormDefault="qualified">
+  <xsd:element name="complaint">
+    <xsd:annotation>
+      <xsd:documentation>This element specifies the main attributes of a
+                         complaint. Used for the overview screen. To get details, use the detail object</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="complaintIdentifier" minOccurs="0"/>
+        <xsd:element ref="caseIdentifier" minOccurs="0"/>
+        <xsd:element name="title" type="xsd:string"/>
+        <xsd:element name="type" type="xsd:string"/>
+        <xsd:element ref="status"/>
+        <xsd:element name="location" type="xsd:string" minOccurs="0"/>
+        <xsd:element name="latitude" type="xsd:float" minOccurs="0"/>
+        <xsd:element name="longitude" type="xsd:float" minOccurs="0"/>
+        <xsd:element name="priority" type="xsd:integer" minOccurs="0"/>
+        <xsd:element name="owner" type="userNameType" minOccurs="0"/>
+        <xsd:element name="createdDate" type="xsd:dateTime" minOccurs="0"/>
+        <xsd:element name="dueDate" type="xsd:date" minOccurs="0"/>
+        <xsd:element name="latestEvent" type="xsd:string" minOccurs="0"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="complaintDetail">
+    <xsd:annotation>
+      <xsd:documentation>This element specifies all attributes of a complaint
+                         including its details. It includes the complaint
+                         element itself.</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="complaint"/>
+        <xsd:element ref="complainer"/>
+        <xsd:element name="feedback" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:element ref="decision" minOccurs="0"/>
+        <xsd:element name="description" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+        <xsd:element name="object" type="xsd:string" minOccurs="0"/>
+        <xsd:element ref="result" minOccurs="0" maxOccurs="unbounded"/>
+        <xsd:element name="mediaItem" minOccurs="0" maxOccurs="unbounded">
+          <xsd:complexType>
+            <xsd:sequence>
+              <xsd:element name="reference" type="xsd:string"/>
+            </xsd:sequence>
+          </xsd:complexType>
+        </xsd:element>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="complainer">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="complainerIdentifier"/>
+        <xsd:element name="bsn" type="xsd:string"/>
+        <xsd:element ref="address"/>
+        <xsd:element name="firstName" type="xsd:string"/>
+        <xsd:element name="lastName" type="xsd:string"/>
+        <xsd:element name="phoneNumber" type="xsd:string"/>
+        <xsd:element ref="gender"/>
+        <xsd:element name="dateOfBirth" type="xsd:date"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="address">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="street" type="xsd:string"/>
+        <xsd:element name="housenumber" type="xsd:string"/>
+        <xsd:element name="zipcode" type="xsd:string"/>
+        <xsd:element name="city" type="xsd:string"/>
+        <xsd:element name="country" type="xsd:string" minOccurs="0"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="activity">
+    <xsd:annotation>
+      <xsd:documentation/>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="activityIdentifier"/>
+        <xsd:element name="title" type="xsd:string"/>
+        <xsd:element name="isCompleted" type="xsd:boolean"/>
+        <xsd:element name="startDate" type="xsd:dateTime" minOccurs="0"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="stage">
+    <xsd:annotation>
+      <xsd:documentation/>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="stageIdentifier"/>
+        <xsd:element name="title" type="xsd:string"/>
+        <xsd:element name="startDate" type="xsd:dateTime" minOccurs="0"/>
+        <xsd:element name="isCompleted" type="xsd:boolean"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="milestone">
+    <xsd:annotation>
+      <xsd:documentation/>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="milestoneIdentifier"/>
+        <xsd:element name="title" type="xsd:string"/>
+        <xsd:element name="dateReached" type="xsd:dateTime" minOccurs="0"/>
+        <xsd:element name="isReached" type="xsd:boolean"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="email">
+    <xsd:annotation>
+      <xsd:documentation/>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="to" type="xsd:string"/>
+        <xsd:element name="cc" type="xsd:string" minOccurs="0"/>
+        <xsd:element name="subject" type="xsd:string"/>
+        <xsd:element name="mailBody" type="xsd:string"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="complaintfilter">
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="period" type="xsd:duration" minOccurs="0"/>
+        <xsd:element name="area" type="xsd:string" minOccurs="0"/>
+        <xsd:element name="status" type="xsd:string" minOccurs="0"/>
+        <xsd:element name="type" type="xsd:string" minOccurs="0"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="complaintIdentifier" type="xsd:string"/>
+  <xsd:element name="activityIdentifier" type="xsd:string"/>
+  <xsd:element name="caseIdentifier" type="xsd:string"/>
+  <xsd:element name="stageIdentifier" type="xsd:string"/>
+  <xsd:element name="milestoneIdentifier" type="xsd:string"/>
+  <xsd:element name="complainerIdentifier" type="xsd:string"/>
+  <xsd:element name="result" type="xsd:string"/>
+  <xsd:element name="status" type="xsd:string"/>
+  <xsd:element name="decision" type="xsd:string"/>
+  <xsd:simpleType name="userNameType">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:simpleType name="complaintIdentifierType">
+    <xsd:restriction base="xsd:string"/>
+  </xsd:simpleType>
+  <xsd:element name="gender">
+    <xsd:simpleType>
+      <xsd:restriction base="xsd:string">
+        <xsd:pattern value="male|female"/>
+      </xsd:restriction>
+    </xsd:simpleType>
+  </xsd:element>
+</xsd:schema>

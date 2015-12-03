@@ -1,0 +1,128 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://hrlmr.nl/order/messages/1.0" targetNamespace="http://hrlmr.nl/order/messages/1.0" elementFormDefault="qualified" xmlns:ntf="http://hrlmr.nl/order/1.0">
+  <xsd:import namespace="http://hrlmr.nl/order/1.0" schemaLocation="ComplaintService-1.0Order-1.0.xsd"/>
+  <xsd:element name="CreateContractors_RequestMessage">
+    <xsd:annotation>
+      <xsd:documentation>Request element to create(empty ID) or update(ID not empty) contractors</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ntf:ContractorsList"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="CreateContractors_ResponseMessage">
+    <xsd:annotation>
+      <xsd:documentation>Response element of creating contractors</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ntf:Status"/>
+        <xsd:element ref="ntf:Description" minOccurs="0" maxOccurs="1"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="GetContractors_RequestMessage">
+    <xsd:annotation>
+      <xsd:documentation>Request element to fetch all contractors</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element name="FetchAllContractors" type="xsd:string" minOccurs="0" maxOccurs="1"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="GetContractors_ResponseMessage">
+    <xsd:annotation>
+      <xsd:documentation>Response element, listing all contractors</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ntf:ContractorsList"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="CreateItems_RequestMessage">
+    <xsd:annotation>
+      <xsd:documentation>Request element to create(empty ID) or update(ID not empty) Stock Items</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ntf:ItemsList"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="CreateItems_ResponseMessage">
+    <xsd:annotation>
+      <xsd:documentation>Response element of creating or updating Stock Items</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ntf:Status"/>
+        <xsd:element ref="ntf:Description" minOccurs="0" maxOccurs="1"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="GetItems_RequestMessage">
+    <xsd:annotation>
+      <xsd:documentation>Request element to retrieve most used items (if elements are emplty) or retrieving a specific item based on Id or Description</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ntf:itemID"/>
+        <xsd:element ref="ntf:itemDescription"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="GetItems_ResponseMessage">
+    <xsd:annotation>
+      <xsd:documentation>Response element, listing items based on request selection</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ntf:ItemsList"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="CreateOrder_RequestMessage">
+    <xsd:annotation>
+      <xsd:documentation>Request element to create a new order</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ntf:Order"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="CreateOrder_ResponsetMessage">
+    <xsd:annotation>
+      <xsd:documentation>Response element of creating a new order</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ntf:Status"/>
+        <xsd:element ref="ntf:Description" minOccurs="0" maxOccurs="1"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="GetOrder_RequestMessage">
+    <xsd:annotation>
+      <xsd:documentation>Request element to retrieve an order, based on caseID</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ntf:caseID"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+  <xsd:element name="GetOrder_ResponsetMessage">
+    <xsd:annotation>
+      <xsd:documentation>Response element, containing requested order</xsd:documentation>
+    </xsd:annotation>
+    <xsd:complexType>
+      <xsd:sequence>
+        <xsd:element ref="ntf:Order"/>
+      </xsd:sequence>
+    </xsd:complexType>
+  </xsd:element>
+</xsd:schema>
